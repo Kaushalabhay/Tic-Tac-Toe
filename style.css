@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Coral+Pixels&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tagesschrift&family=Teko:wght@300..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Tagesschrift", system-ui;
+    
+  /* font-family: "Coral Pixels", serif; */
+
+}
+
+.game-container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    /* border: 12px solid black; */
+    
+}
+
+.game-play{
+    display: grid;
+    grid-template-columns: repeat(3, 10vw); 
+    grid-template-rows: repeat(3, 10vw);
+    margin-top: 50px; 
+    text-align: center;
+    position: relative;
+}
+
+.game-box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    /* background-color: #ec45ff; */
+}
+
+.game-box:hover{
+    background-color: #f6a2ff;
+
+}
+
+#resetButton{
+    margin-top: 50px;
+    padding: 10px 25px;
+    font-size: 3vw;
+    font-weight: 900;
+    background-color: #f07bfd;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 8px;
+}
+
+.br-l{
+    border-left: none;
+}
+
+.br-r{
+    border-right: none;
+}
+.br-t{
+    border-top: none;
+}
+.br-d{
+    border-bottom: none;
+}
+
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: #911d91;
+    transition: width 1s ease-in-out;
+}
+
+@media  screen and (max-width: 800px) 
+{
+    .game-container{
+        flex-wrap: wrap;
+    }       
+    .game-play{
+        /* display: grid; */
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+}
